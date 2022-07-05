@@ -1,8 +1,8 @@
-# TensorFlow Lite Byte Tracking
+# TensorFlow Lite SSD with Tracking
 
 https://user-images.githubusercontent.com/44409029/177194397-ae880e75-0433-453b-b991-38b2a7d2b4fc.mp4
 
-## TensorFlow Lite with Byte Tracking. <br/>
+## TensorFlow Lite SSD with Byte Tracking. <br/>
 The model tries to keep track of the individual objects found in the scenes. The example video follows the walkers as they stroll along. Obvious, not a simple task. Not only does the detection needs to be at a robust level. You also have to solve occlusion as the walkers pass each other.</br>
 The undeniably high FPS comes with a price. The tracker often loses track because the object detection is not robust enough. You often see two people merging into one object, only to become two again.</br></br>
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)<br/><br/>
