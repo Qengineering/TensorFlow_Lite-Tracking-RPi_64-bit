@@ -85,15 +85,11 @@ void detect_from_video(Mat &src,BYTETracker &track)
 
     for(size_t i = 0; i < output_stracks.size(); i++){
         vector<float> tlwh = output_stracks[i].tlwh;
-        bool vertical = tlwh[2] / tlwh[3] > 1.6;
-        if (tlwh[2] * tlwh[3] > 20 && !vertical){
-            Scalar s = track.get_color(output_stracks[i].track_id);
-            putText(src, format("%d", output_stracks[i].track_id), Point(tlwh[0], tlwh[1] - 5),
+        Scalar s = track.get_color(output_stracks[i].track_id);
+        putText(src, format("%d", output_stracks[i].track_id), Point(tlwh[0], tlwh[1] - 5),
                     0, 0.6, Scalar(0, 0, 255), 2, LINE_AA);
-            rectangle(src, Rect(tlwh[0], tlwh[1], tlwh[2], tlwh[3]), s, 2);
-        }
+        rectangle(src, Rect(tlwh[0], tlwh[1], tlwh[2], tlwh[3]), s, 2);
     }
-
 }
 
 int main(int argc,char ** argv)
